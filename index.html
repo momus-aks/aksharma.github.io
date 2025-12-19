@@ -6,39 +6,46 @@ layout: null
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anurag Sharma | Scientist</title>
+    <title>Anurag Sharma</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono&family=Playfair+Display:italic,wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@300;500&family=Playfair+Display:italic,wght@400;700&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js" type="module"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
 
     <style>
-        body { background: #000; color: #e5e7eb; font-family: 'Orbitron', sans-serif; overflow-x: hidden; }
+        body { background: #010101; color: #d1d5db; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .mono { font-family: 'JetBrains Mono', monospace; }
         .serif { font-family: 'Playfair Display', serif; }
         
         .glass { 
             background: rgba(255, 255, 255, 0.01); 
-            backdrop-filter: blur(25px); 
-            border: 1px solid rgba(255, 255, 255, 0.05); 
+            backdrop-filter: blur(40px); 
+            border: 1px solid rgba(255, 255, 255, 0.04); 
         }
         
-        .project-card:hover { border-color: #6366f1; box-shadow: 0 0 30px rgba(99, 102, 241, 0.2); }
-
+        /* Smaller, more elegant header */
         .name-header {
-            background: linear-gradient(to bottom, #fff 30%, #4f46e5);
+            font-size: clamp(3rem, 8vw, 6rem); /* Reduced size */
+            letter-spacing: -0.04em;
+            background: linear-gradient(to bottom, #fff 50%, #9ca3af);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            font-weight: 800;
         }
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-track { background: #000; }
-        ::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 10px; }
+        .project-row {
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.4s ease;
+        }
+        .project-row:hover { background: rgba(255,255,255,0.02); padding-left: 10px; border-color: #6366f1; }
+
+        .photo-card { border-radius: 2rem; overflow: hidden; position: relative; height: 500px; }
+        .photo-card img { filter: brightness(0.6) contrast(1.1); transition: 0.8s; width: 100%; height: 100%; object-cover: cover; }
+        .photo-card:hover img { filter: brightness(1) contrast(1); transform: scale(1.03); }
     </style>
 </head>
 <body>
@@ -48,114 +55,123 @@ layout: null
     <main class="relative z-10">
         
         <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-            <div data-aos="zoom-out" data-aos-duration="1500" class="mb-[-40px]">
-                <dotlottie-wc src="https://lottie.host/0200508b-7036-4702-8a9d-476778f67389/x9j9TboyaP.lottie" speed="1.2" style="width: 450px; height: 450px;" loop autoplay></dotlottie-wc>
+            <div data-aos="zoom-out" data-aos-duration="1500" class="mb-[-30px]">
+                <dotlottie-player 
+                    src="https://lottie.host/0200508b-7036-4702-8a9d-476778f67389/x9j9TboyaP.lottie" 
+                    background="transparent" 
+                    speed="1" 
+                    style="width: 300px; height: 300px;" 
+                    loop 
+                    autoplay>
+                </dotlottie-player>
             </div>
             
-            <h1 class="text-6xl md:text-9xl font-black tracking-tighter name-header uppercase mb-6">Anurag Sharma</h1>
+            <h1 class="name-header uppercase mb-2">Anurag Sharma</h1>
             
-            <div class="mono text-indigo-400 tracking-[0.4em] text-xs h-8">
+            <div class="mono text-indigo-400 tracking-[0.3em] text-[10px] uppercase h-6">
                 <span id="typed-header"></span>
             </div>
         </section>
 
-        <section class="max-w-[1600px] mx-auto px-8 mb-40">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div data-tilt data-aos="fade-right" class="md:col-span-2 glass p-16 rounded-[4rem]">
-                    <h2 class="text-3xl font-bold mb-8 tracking-widest text-white uppercase">Systems Intelligence</h2>
-                    <p class="text-gray-400 text-2xl leading-relaxed font-light mb-10">
-                        Scientist at the Department of Space. Specializing in Deep Learning, Quantum Computing, VPN Security, and Networks. Architecting space-grade technical logic.
+        <section class="max-w-[1400px] mx-auto px-8 mb-40">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                <div data-aos="fade-right" class="md:col-span-7">
+                    <h2 class="mono text-[10px] text-gray-500 uppercase tracking-[0.5em] mb-6">Introduction</h2>
+                    <p class="text-gray-300 text-xl font-light leading-relaxed mb-8">
+                        Scientist at the Department of Space. Specializing in Deep Learning architectures, Quantum Computing frameworks, and secure network infrastructure.
                     </p>
-                    <div class="flex flex-wrap gap-4 mono text-[10px]">
-                        <span class="px-5 py-2 glass rounded-full border border-white/10">5G CORE</span>
-                        <span class="px-5 py-2 glass rounded-full border border-white/10">PQC CRYPTO</span>
-                        <span class="px-5 py-2 glass rounded-full border border-white/10">QISKIT</span>
-                        <span class="px-5 py-2 glass rounded-full border border-white/10">PYTORCH</span>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-1 rounded-full border border-white/10 text-[10px] mono text-gray-500 hover:text-indigo-400 transition-colors cursor-default uppercase">Deep Learning</span>
+                        <span class="px-4 py-1 rounded-full border border-white/10 text-[10px] mono text-gray-500 hover:text-indigo-400 transition-colors cursor-default uppercase">Quantum</span>
+                        <span class="px-4 py-1 rounded-full border border-white/10 text-[10px] mono text-gray-500 hover:text-indigo-400 transition-colors cursor-default uppercase">VPN Security</span>
+                        <span class="px-4 py-1 rounded-full border border-white/10 text-[10px] mono text-gray-500 hover:text-indigo-400 transition-colors cursor-default uppercase">Networks</span>
                     </div>
                 </div>
-                <div data-aos="fade-left" class="glass p-12 rounded-[4rem] flex flex-col justify-center bg-indigo-600/5">
-                    <h3 class="mono text-indigo-500 text-[10px] tracking-[0.4em] uppercase mb-6">Education</h3>
-                    <p class="text-white font-bold text-lg mb-1">IIT Delhi</p>
-                    <p class="text-gray-500 text-xs mb-6 uppercase tracking-widest">Masters CS</p>
-                    <p class="text-white font-bold text-lg mb-1">ISRO</p>
-                    <p class="text-gray-500 text-xs uppercase tracking-widest">Scientist C</p>
+                <div data-aos="fade-left" class="md:col-span-5 glass p-10 rounded-[2rem] flex flex-col justify-center">
+                    <div class="mb-6">
+                        <p class="mono text-[9px] text-indigo-500 uppercase tracking-widest mb-1">Affiliation</p>
+                        <p class="text-white text-lg font-semibold">Scientist C, Dept. of Space</p>
+                    </div>
+                    <div>
+                        <p class="mono text-[9px] text-indigo-500 uppercase tracking-widest mb-1">Education</p>
+                        <p class="text-white text-lg font-semibold">IIT Delhi, M.S. CS</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="max-w-[1600px] mx-auto px-8 mb-40">
-            <h3 class="mono text-gray-600 text-[10px] tracking-[1em] uppercase mb-12 text-center">Repository / Index</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <section class="max-w-[1400px] mx-auto px-8 mb-40">
+            <h3 class="mono text-gray-600 text-[10px] tracking-[1em] uppercase mb-16 text-center">Project Repository</h3>
+            <div class="grid grid-cols-1 gap-0">
                 
-                <div data-aos="fade-up" class="project-card glass p-10 rounded-[3rem] border border-white/5">
-                    <span class="text-indigo-500 mono text-xs">01. Official</span>
-                    <h4 class="text-xl font-bold mt-4 mb-2">5G-and-Beyond</h4>
-                    <p class="text-gray-500 text-sm font-light">Tested 5G core network deployment scripts and documentation.</p>
+                <div class="project-row py-8 flex flex-col md:flex-row md:items-center justify-between group">
+                    <div class="flex items-center gap-8">
+                        <span class="mono text-xs text-indigo-500/50 group-hover:text-indigo-500 transition-colors">01</span>
+                        <h4 class="text-2xl font-light text-white uppercase tracking-tight">5G Core Infrastructure</h4>
+                    </div>
+                    <p class="text-gray-500 text-sm mt-2 md:mt-0 max-w-md font-light">Optimized deployment frameworks for tested 5G core networks and documentation.</p>
                 </div>
 
-                <div data-aos="fade-up" data-aos-delay="100" class="project-card glass p-10 rounded-[3rem] border border-white/5">
-                    <span class="text-indigo-500 mono text-xs">02. Framework</span>
-                    <h4 class="text-xl font-bold mt-4 mb-2">Flower (flwr)</h4>
-                    <p class="text-gray-500 text-sm font-light">Federated Learning framework for customizable use cases.</p>
+                <div class="project-row py-8 flex flex-col md:flex-row md:items-center justify-between group">
+                    <div class="flex items-center gap-8">
+                        <span class="mono text-xs text-indigo-500/50 group-hover:text-indigo-500 transition-colors">02</span>
+                        <h4 class="text-2xl font-light text-white uppercase tracking-tight">Flower Framework</h4>
+                    </div>
+                    <p class="text-gray-500 text-sm mt-2 md:mt-0 max-w-md font-light">Customizable Federated Learning systems for high-security distributed datasets.</p>
                 </div>
 
-                <div data-aos="fade-up" data-aos-delay="200" class="project-card glass p-10 rounded-[3rem] border border-white/5">
-                    <span class="text-indigo-500 mono text-xs">03. Security</span>
-                    <h4 class="text-xl font-bold mt-4 mb-2">Wireguard PQC</h4>
-                    <p class="text-gray-500 text-sm font-light">PQC-based VPN services with integrated dashboard.</p>
+                <div class="project-row py-8 flex flex-col md:flex-row md:items-center justify-between group">
+                    <div class="flex items-center gap-8">
+                        <span class="mono text-xs text-indigo-500/50 group-hover:text-indigo-500 transition-colors">03</span>
+                        <h4 class="text-2xl font-light text-white uppercase tracking-tight">Post-Quantum VPN</h4>
+                    </div>
+                    <p class="text-gray-500 text-sm mt-2 md:mt-0 max-w-md font-light">Wireguard-based VPN implementation utilizing PQC algorithms and dashboard.</p>
                 </div>
 
-                <div data-aos="fade-up" class="project-card glass p-10 rounded-[3rem] border border-white/5">
-                    <span class="text-emerald-500 mono text-xs">04. Satellite</span>
-                    <h4 class="text-xl font-bold mt-4 mb-2">Orbitwall</h4>
-                    <p class="text-gray-500 text-sm font-light">Satellite-based dynamic wallpaper app for Android.</p>
-                </div>
-
-                <div data-aos="fade-up" data-aos-delay="100" class="project-card glass p-10 rounded-[3rem] border border-white/5">
-                    <span class="text-emerald-500 mono text-xs">05. Computer Vision</span>
-                    <h4 class="text-xl font-bold mt-4 mb-2">Sat Annotator</h4>
-                    <p class="text-gray-500 text-sm font-light">Satellite image annotation tool and model training.</p>
-                </div>
-
-                <div data-aos="fade-up" data-aos-delay="200" class="project-card glass p-10 rounded-[3rem] border border-white/5">
-                    <span class="text-emerald-500 mono text-xs">06. Systems</span>
-                    <h4 class="text-xl font-bold mt-4 mb-2">Markdown Parser</h4>
-                    <p class="text-gray-500 text-sm font-light">Custom built parser for efficient content rendering.</p>
+                <div class="project-row py-8 flex flex-col md:flex-row md:items-center justify-between group">
+                    <div class="flex items-center gap-8">
+                        <span class="mono text-xs text-indigo-500/50 group-hover:text-indigo-500 transition-colors">04</span>
+                        <h4 class="text-2xl font-light text-white uppercase tracking-tight">Satellite Analytics</h4>
+                    </div>
+                    <p class="text-gray-500 text-sm mt-2 md:mt-0 max-w-md font-light">Sat Annotator: Image annotation tool and model training for space-borne data.</p>
                 </div>
 
             </div>
         </section>
 
-        <section class="max-w-[1600px] mx-auto px-8 mb-40">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div data-aos="fade-right" class="md:col-span-3 glass p-20 rounded-[5rem] relative">
-                    <div class="absolute top-10 right-10 opacity-10 text-8xl serif">ॐ</div>
-                    <h3 class="mono text-indigo-500 text-[10px] tracking-[0.6em] uppercase mb-10 text-center">Ishopanishad</h3>
-                    <div class="min-h-[140px] text-center">
-                        <span id="typed-quote" class="serif text-4xl text-gray-200 italic leading-snug"></span>
+        <section class="max-w-[1400px] mx-auto px-8 mb-40">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div data-aos="fade-up" class="md:col-span-2 glass p-16 rounded-[3rem] relative overflow-hidden">
+                    <div class="absolute top-10 right-10 opacity-10 text-9xl serif">ॐ</div>
+                    <h3 class="mono text-indigo-500 text-[9px] tracking-[0.5em] uppercase mb-10">Ishopanishad Wisdom</h3>
+                    <div class="min-h-[140px]">
+                        <span id="typed-quote" class="serif text-3xl text-gray-200 italic leading-relaxed"></span>
                     </div>
                 </div>
                 <div class="flex flex-col gap-6">
-                    <div data-aos="fade-left" class="glass p-10 rounded-[3rem]">
-                        <h4 class="mono text-violet-500 text-[10px] tracking-[0.4em] mb-4 uppercase">Books</h4>
-                        <p class="text-xs text-gray-500 leading-relaxed font-light">Phenomenology of Spirit • Manufacturing Consent • Brave New World</p>
+                    <div data-aos="fade-left" class="glass p-10 rounded-[2rem]">
+                        <h4 class="mono text-violet-500 text-[9px] tracking-[0.4em] mb-4 uppercase">Influences</h4>
+                        <p class="text-[11px] text-gray-500 leading-relaxed font-light uppercase tracking-tighter">
+                            Hegel • Foucault • Schopenhauer • Chomsky • Huxley • Socrates • Ulay
+                        </p>
                     </div>
-                    <div data-aos="fade-left" data-aos-delay="100" class="glass p-10 rounded-[3rem]">
-                        <h4 class="mono text-pink-500 text-[10px] tracking-[0.4em] mb-4 uppercase">Media</h4>
-                        <p class="text-xs text-gray-500 leading-relaxed font-light">Stalker • Interstellar • Mindhunter • Dark</p>
+                    <div data-aos="fade-left" data-aos-delay="100" class="glass p-10 rounded-[2rem]">
+                        <h4 class="mono text-pink-500 text-[9px] tracking-[0.4em] mb-4 uppercase">Media</h4>
+                        <p class="text-[11px] text-gray-500 leading-relaxed font-light uppercase tracking-tighter">
+                            Interstellar • Stalker • Mindhunter • Dark
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="max-w-[1600px] mx-auto px-8 mb-40 text-center">
-            <h3 class="mono text-gray-600 text-[10px] tracking-[1em] uppercase mb-12">Optics</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div data-aos="fade-up" class="photo-card overflow-hidden rounded-[3rem] h-[600px] glass">
-                    <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1000" class="w-full h-full object-cover opacity-40 hover:opacity-100 transition-opacity">
+        <section class="max-w-[1400px] mx-auto px-8 mb-40">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div data-aos="fade-up" class="photo-card glass">
+                    <img src="assets/photography/DSC01549.JPG">
                 </div>
-                <div data-aos="fade-up" data-aos-delay="200" class="photo-card overflow-hidden rounded-[3rem] h-[600px] glass">
-                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000" class="w-full h-full object-cover opacity-40 hover:opacity-100 transition-opacity">
+                <div data-aos="fade-up" data-aos-delay="200" class="photo-card glass">
+                    <img src="assets/photography/DSC01925.JPG">
                 </div>
             </div>
         </section>
@@ -166,11 +182,11 @@ layout: null
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     
     <script>
-        AOS.init({ duration: 1500, once: true });
-        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), { max: 3, speed: 400, glare: true, "max-glare": 0.1 });
-
+        AOS.init({ duration: 1200, once: true });
+        
+        // Slower Typing Speeds
         new Typed('#typed-header', {
-            strings: ['Scientist @ ISRO', 'Theoretical Computer Scientist', 'Quantum Explorer', 'Systems Architect'],
+            strings: ['Scientist @ ISRO', 'Theoretical Computer Scientist', 'Quantum Explorer', 'Systems Architect', 'Amateur Photographer'],
             typeSpeed: 100, backSpeed: 60, backDelay: 3000, loop: true
         });
 
@@ -181,7 +197,7 @@ layout: null
                 '“The eye through which I see God is the same eye through which God sees me.”',
                 '“All this, whatsoever moves in this moving world, is enveloped by God.”'
             ],
-            typeSpeed: 60, backSpeed: 30, backDelay: 5000, loop: true
+            typeSpeed: 70, backSpeed: 30, backDelay: 5000, loop: true
         });
 
         particlesJS("particles-js", {
@@ -189,9 +205,9 @@ layout: null
                 number: { value: 30 },
                 color: { value: "#ffffff" },
                 opacity: { value: 0.1 },
-                size: { value: 1.5 },
+                size: { value: 1 },
                 line_linked: { enable: true, distance: 250, color: "#ffffff", opacity: 0.05 },
-                move: { enable: true, speed: 0.6 }
+                move: { enable: true, speed: 0.4 }
             }
         });
     </script>
