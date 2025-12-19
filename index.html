@@ -6,9 +6,9 @@ layout: null
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anurag Sharma</title>
+    <title>Anurag Sharma | Scientist</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;800&family=JetBrains+Mono&family=Playfair+Display:italic,wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono&family=Playfair+Display:italic,wght@400;700&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js" type="module"></script>
@@ -17,30 +17,28 @@ layout: null
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
 
     <style>
-        body { background: #010101; color: #e5e7eb; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
+        body { background: #000; color: #e5e7eb; font-family: 'Orbitron', sans-serif; overflow-x: hidden; }
         .mono { font-family: 'JetBrains Mono', monospace; }
         .serif { font-family: 'Playfair Display', serif; }
         
         .glass { 
             background: rgba(255, 255, 255, 0.01); 
-            backdrop-filter: blur(30px); 
-            border: 1px solid rgba(255, 255, 255, 0.06); 
+            backdrop-filter: blur(25px); 
+            border: 1px solid rgba(255, 255, 255, 0.05); 
         }
         
-        .photo-card {
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-            filter: grayscale(100%);
-        }
-        .photo-card:hover { filter: grayscale(0%); transform: scale(1.02); }
+        .project-card:hover { border-color: #6366f1; box-shadow: 0 0 30px rgba(99, 102, 241, 0.2); }
 
-        .text-reveal {
-            background: linear-gradient(to right, #fff 20%, #818cf8 50%, #fff 80%);
-            background-size: 200% auto;
+        .name-header {
+            background: linear-gradient(to bottom, #fff 30%, #4f46e5);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: shine 6s linear infinite;
         }
-        @keyframes shine { to { background-position: 200% center; } }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 10px; }
     </style>
 </head>
 <body>
@@ -50,98 +48,114 @@ layout: null
     <main class="relative z-10">
         
         <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-            <div data-aos="zoom-out" data-aos-duration="2000" class="mb-4">
-                <dotlottie-wc src="https://lottie.host/0200508b-7036-4702-8a9d-476778f67389/x9j9TboyaP.lottie" speed="1" style="width: 320px; height: 320px;" loop autoplay></dotlottie-wc>
+            <div data-aos="zoom-out" data-aos-duration="1500" class="mb-[-40px]">
+                <dotlottie-wc src="https://lottie.host/0200508b-7036-4702-8a9d-476778f67389/x9j9TboyaP.lottie" speed="1.2" style="width: 450px; height: 450px;" loop autoplay></dotlottie-wc>
             </div>
-            <h1 class="text-7xl md:text-9xl font-extrabold tracking-tighter mb-6 text-reveal uppercase italic">Anurag K. Sharma</h1>
-            <div class="mono text-indigo-400 tracking-[0.5em] uppercase text-xs">
+            
+            <h1 class="text-6xl md:text-9xl font-black tracking-tighter name-header uppercase mb-6">Anurag Sharma</h1>
+            
+            <div class="mono text-indigo-400 tracking-[0.4em] text-xs h-8">
                 <span id="typed-header"></span>
             </div>
         </section>
 
-        <section class="max-w-[1500px] mx-auto px-8 mb-40">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-                <div data-tilt data-aos="fade-right" class="md:col-span-8 glass p-16 rounded-[4rem]">
-                    <h2 class="text-5xl font-extrabold mb-8 italic tracking-tight">About</h2>
+        <section class="max-w-[1600px] mx-auto px-8 mb-40">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div data-tilt data-aos="fade-right" class="md:col-span-2 glass p-16 rounded-[4rem]">
+                    <h2 class="text-3xl font-bold mb-8 tracking-widest text-white uppercase">Systems Intelligence</h2>
                     <p class="text-gray-400 text-2xl leading-relaxed font-light mb-10">
-                        Scientist at the Department of Space. Focused on Deep Learning, Quantum Computing, VPN Security, and Networks. Architecting high-level logic for space-grade implementations.
+                        Scientist at the Department of Space. Specializing in Deep Learning, Quantum Computing, VPN Security, and Networks. Architecting space-grade technical logic.
                     </p>
-                    <div class="flex flex-wrap gap-4 mono text-[10px] text-indigo-300">
-                        <span class="px-5 py-2 glass rounded-full tracking-widest border border-indigo-500/20">DEEP LEARNING</span>
-                        <span class="px-5 py-2 glass rounded-full tracking-widest border border-indigo-500/20">QUANTUM</span>
-                        <span class="px-5 py-2 glass rounded-full tracking-widest border border-indigo-500/20">VPN SECURITY</span>
-                        <span class="px-5 py-2 glass rounded-full tracking-widest border border-indigo-500/20">NETWORKS</span>
+                    <div class="flex flex-wrap gap-4 mono text-[10px]">
+                        <span class="px-5 py-2 glass rounded-full border border-white/10">5G CORE</span>
+                        <span class="px-5 py-2 glass rounded-full border border-white/10">PQC CRYPTO</span>
+                        <span class="px-5 py-2 glass rounded-full border border-white/10">QISKIT</span>
+                        <span class="px-5 py-2 glass rounded-full border border-white/10">PYTORCH</span>
                     </div>
                 </div>
-                <div data-tilt data-aos="fade-left" class="md:col-span-4 glass p-16 rounded-[4rem] flex flex-col justify-center items-center text-center">
-                    <div class="text-6xl mb-6">🧬</div>
-                    <h3 class="text-2xl font-bold italic mb-2">Projects</h3>
-                    <p class="text-gray-500 text-sm font-light">Image Segmentation | PyTorch</p>
+                <div data-aos="fade-left" class="glass p-12 rounded-[4rem] flex flex-col justify-center bg-indigo-600/5">
+                    <h3 class="mono text-indigo-500 text-[10px] tracking-[0.4em] uppercase mb-6">Education</h3>
+                    <p class="text-white font-bold text-lg mb-1">IIT Delhi</p>
+                    <p class="text-gray-500 text-xs mb-6 uppercase tracking-widest">Masters CS</p>
+                    <p class="text-white font-bold text-lg mb-1">ISRO</p>
+                    <p class="text-gray-500 text-xs uppercase tracking-widest">Scientist C</p>
                 </div>
             </div>
         </section>
 
-        <section class="max-w-[1500px] mx-auto px-8 mb-40">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div data-aos="fade-up" class="md:col-span-2 glass p-20 rounded-[5rem]">
-                    <h3 class="mono text-indigo-500 text-[10px] tracking-[0.6em] uppercase mb-10">Philosophy</h3>
-                    <div class="min-h-[120px]">
+        <section class="max-w-[1600px] mx-auto px-8 mb-40">
+            <h3 class="mono text-gray-600 text-[10px] tracking-[1em] uppercase mb-12 text-center">Repository / Index</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div data-aos="fade-up" class="project-card glass p-10 rounded-[3rem] border border-white/5">
+                    <span class="text-indigo-500 mono text-xs">01. Official</span>
+                    <h4 class="text-xl font-bold mt-4 mb-2">5G-and-Beyond</h4>
+                    <p class="text-gray-500 text-sm font-light">Tested 5G core network deployment scripts and documentation.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="project-card glass p-10 rounded-[3rem] border border-white/5">
+                    <span class="text-indigo-500 mono text-xs">02. Framework</span>
+                    <h4 class="text-xl font-bold mt-4 mb-2">Flower (flwr)</h4>
+                    <p class="text-gray-500 text-sm font-light">Federated Learning framework for customizable use cases.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="project-card glass p-10 rounded-[3rem] border border-white/5">
+                    <span class="text-indigo-500 mono text-xs">03. Security</span>
+                    <h4 class="text-xl font-bold mt-4 mb-2">Wireguard PQC</h4>
+                    <p class="text-gray-500 text-sm font-light">PQC-based VPN services with integrated dashboard.</p>
+                </div>
+
+                <div data-aos="fade-up" class="project-card glass p-10 rounded-[3rem] border border-white/5">
+                    <span class="text-emerald-500 mono text-xs">04. Satellite</span>
+                    <h4 class="text-xl font-bold mt-4 mb-2">Orbitwall</h4>
+                    <p class="text-gray-500 text-sm font-light">Satellite-based dynamic wallpaper app for Android.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" class="project-card glass p-10 rounded-[3rem] border border-white/5">
+                    <span class="text-emerald-500 mono text-xs">05. Computer Vision</span>
+                    <h4 class="text-xl font-bold mt-4 mb-2">Sat Annotator</h4>
+                    <p class="text-gray-500 text-sm font-light">Satellite image annotation tool and model training.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="project-card glass p-10 rounded-[3rem] border border-white/5">
+                    <span class="text-emerald-500 mono text-xs">06. Systems</span>
+                    <h4 class="text-xl font-bold mt-4 mb-2">Markdown Parser</h4>
+                    <p class="text-gray-500 text-sm font-light">Custom built parser for efficient content rendering.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="max-w-[1600px] mx-auto px-8 mb-40">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div data-aos="fade-right" class="md:col-span-3 glass p-20 rounded-[5rem] relative">
+                    <div class="absolute top-10 right-10 opacity-10 text-8xl serif">ॐ</div>
+                    <h3 class="mono text-indigo-500 text-[10px] tracking-[0.6em] uppercase mb-10 text-center">Ishopanishad</h3>
+                    <div class="min-h-[140px] text-center">
                         <span id="typed-quote" class="serif text-4xl text-gray-200 italic leading-snug"></span>
                     </div>
-                    <div class="mt-12 flex flex-wrap gap-3">
-                        <span class="px-4 py-2 glass rounded-lg text-[10px] mono uppercase">Ishopanishad</span>
-                        <span class="px-4 py-2 glass rounded-lg text-[10px] mono uppercase">Advaita Vedanta</span>
-                        <span class="px-4 py-2 glass rounded-lg text-[10px] mono uppercase">Kashmir Shaivism</span>
-                        <span class="px-4 py-2 glass rounded-lg text-[10px] mono uppercase">Hegel</span>
-                        <span class="px-4 py-2 glass rounded-lg text-[10px] mono uppercase">Chomsky</span>
-                        <span class="px-4 py-2 glass rounded-lg text-[10px] mono uppercase">Foucault</span>
-                        <span class="px-4 py-2 glass rounded-lg text-[10px] mono uppercase">Schopenhauer</span>
-                    </div>
                 </div>
-                <div class="flex flex-col gap-8">
-                    <div data-aos="fade-left" class="glass p-12 rounded-[4rem] flex-1">
-                        <h4 class="mono text-violet-500 text-[10px] tracking-[0.4em] uppercase mb-6">Reading</h4>
-                        <ul class="space-y-3 text-gray-400 text-sm font-light">
-                            <li>Phenomenology of Spirit</li>
-                            <li>Brave New World</li>
-                            <li>Manufacturing Consent</li>
-                            <li>The Republic</li>
-                        </ul>
+                <div class="flex flex-col gap-6">
+                    <div data-aos="fade-left" class="glass p-10 rounded-[3rem]">
+                        <h4 class="mono text-violet-500 text-[10px] tracking-[0.4em] mb-4 uppercase">Books</h4>
+                        <p class="text-xs text-gray-500 leading-relaxed font-light">Phenomenology of Spirit • Manufacturing Consent • Brave New World</p>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="100" class="glass p-10 rounded-[3rem]">
+                        <h4 class="mono text-pink-500 text-[10px] tracking-[0.4em] mb-4 uppercase">Media</h4>
+                        <p class="text-xs text-gray-500 leading-relaxed font-light">Stalker • Interstellar • Mindhunter • Dark</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="max-w-[1500px] mx-auto px-8 mb-40">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div data-aos="fade-up" class="photo-card glass overflow-hidden rounded-[3rem] h-[500px] relative">
-                    <img src="assets/photography/DSC01549.JPG" class="w-full h-full object-cover opacity-60">
-                    <div class="absolute bottom-10 left-10">
-                        <p class="mono text-[10px] text-white/50 italic tracking-widest">Copyright : Anurag Sharma</p>
-                    </div>
+        <section class="max-w-[1600px] mx-auto px-8 mb-40 text-center">
+            <h3 class="mono text-gray-600 text-[10px] tracking-[1em] uppercase mb-12">Optics</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div data-aos="fade-up" class="photo-card overflow-hidden rounded-[3rem] h-[600px] glass">
+                    <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1000" class="w-full h-full object-cover opacity-40 hover:opacity-100 transition-opacity">
                 </div>
-                <div data-aos="fade-up" data-aos-delay="200" class="photo-card glass overflow-hidden rounded-[3rem] h-[500px] relative">
-                    <img src="assets/photography/DSC01925.JPG" class="w-full h-full object-cover opacity-60">
-                    <div class="absolute bottom-10 left-10">
-                        <p class="mono text-[10px] text-white/50 italic tracking-widest"> Copyright : Anurag Sharma</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="max-w-[1500px] mx-auto px-8 pb-40">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mono text-[10px] tracking-widest uppercase">
-                <div class="glass py-16 rounded-[2rem] text-center">
-                    <p class="text-gray-600 mb-2">IIT Delhi</p>
-                    <p class="text-white text-base">Masters CS</p>
-                </div>
-                <div class="glass py-16 rounded-[2rem] text-center border-b border-indigo-500/50">
-                    <p class="text-gray-600 mb-2">Department of Space</p>
-                    <p class="text-indigo-400 text-base">Scientist C</p>
-                </div>
-                <div class="glass py-16 rounded-[2rem] text-center">
-                    <p class="text-gray-600 mb-2">Media</p>
-                    <p class="text-white text-base">Dark / Mindhunter / Interstellar</p>
+                <div data-aos="fade-up" data-aos-delay="200" class="photo-card overflow-hidden rounded-[3rem] h-[600px] glass">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000" class="w-full h-full object-cover opacity-40 hover:opacity-100 transition-opacity">
                 </div>
             </div>
         </section>
@@ -153,31 +167,31 @@ layout: null
     
     <script>
         AOS.init({ duration: 1500, once: true });
-        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), { max: 4, speed: 400, glare: true, "max-glare": 0.1 });
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), { max: 3, speed: 400, glare: true, "max-glare": 0.1 });
 
         new Typed('#typed-header', {
-            strings: ['Scientist @ ISRO', 'Deep Learning', 'Quantum Computing', 'VPN Security', 'Networks', 'Amateur Photographer'],
-            typeSpeed: 60, backSpeed: 40, loop: true
+            strings: ['Scientist @ ISRO', 'Theoretical Computer Scientist', 'Quantum Explorer', 'Systems Architect'],
+            typeSpeed: 100, backSpeed: 60, backDelay: 3000, loop: true
         });
 
         new Typed('#typed-quote', {
             strings: [
                 '“Īśāvāsyam idaṁ sarvaṁ yat kiñca jagatyāṁ jagat.”',
-                '“The eye through which I see God is the same eye through which God sees me.”',
                 '“Tena tyaktena bhuñjīthā mā gṛdhaḥ kasya svid dhanam.”',
-                '“The owl of Minerva spreads its wings only at dusk.”'
+                '“The eye through which I see God is the same eye through which God sees me.”',
+                '“All this, whatsoever moves in this moving world, is enveloped by God.”'
             ],
-            typeSpeed: 50, backSpeed: 30, loop: true
+            typeSpeed: 60, backSpeed: 30, backDelay: 5000, loop: true
         });
 
         particlesJS("particles-js", {
             particles: {
-                number: { value: 40 },
+                number: { value: 30 },
                 color: { value: "#ffffff" },
                 opacity: { value: 0.1 },
-                size: { value: 1 },
-                line_linked: { enable: true, distance: 200, opacity: 0.05 },
-                move: { enable: true, speed: 1 }
+                size: { value: 1.5 },
+                line_linked: { enable: true, distance: 250, color: "#ffffff", opacity: 0.05 },
+                move: { enable: true, speed: 0.6 }
             }
         });
     </script>
