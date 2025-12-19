@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Anurag Sharma | ISRO Scientist
+title: Anurag | Scientist @ ISRO
 ---
 
 <!DOCTYPE html>
@@ -8,19 +8,24 @@ title: Anurag Sharma | ISRO Scientist
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anurag Sharma | Scientist at ISRO</title>
+    <title>Anurag | Scientist at ISRO</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js" type="module"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
         body { background: #050505; color: white; overflow-x: hidden; }
-        .glass { 
-            background: rgba(255, 255, 255, 0.02); 
-            backdrop-filter: blur(20px); 
-            border: 1px solid rgba(255, 255, 255, 0.05); 
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .glow:hover { 
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.4); 
+            border-color: #38bdf8; 
+            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
         }
-        .text-glow { text-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
+        .text-gradient {
+            background: linear-gradient(to r, #60a5fa, #34d399, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 <body class="font-sans">
@@ -28,50 +33,54 @@ title: Anurag Sharma | ISRO Scientist
     <div id="particles-js" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events:none;"></div>
 
     <main class="relative z-10">
-        <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+        <section class="h-screen flex flex-col justify-center items-center text-center px-4">
             <div data-aos="zoom-in" class="mb-2">
-                <dotlottie-wc src="https://lottie.host/0200508b-7036-4702-8a9d-476778f67389/x9j9TboyaP.lottie" speed="0.8" style="width: 250px; height: 250px;" loop autoplay></dotlottie-wc>
+                <dotlottie-wc src="https://lottie.host/0200508b-7036-4702-8a9d-476778f67389/x9j9TboyaP.lottie" speed="1.2" style="width: 350px; height: 350px;" loop autoplay></dotlottie-wc>
             </div>
 
-            <h1 data-aos="fade-up" class="text-5xl md:text-7xl font-bold tracking-tight mb-4">
-                Anurag Sharma
+            <h1 data-aos="fade-up" class="text-6xl md:text-8xl font-black mb-4 tracking-tighter italic">
+                ANURAG <span class="text-gradient">SHARMA</span>
             </h1>
-            <p data-aos="fade-up" data-aos-delay="200" class="text-xl md:text-2xl text-orange-500 font-mono tracking-widest uppercase mb-6">
-                Scientist at ISRO
-            </p>
-            <p data-aos="fade-up" data-aos-delay="400" class="max-w-3xl text-gray-400 text-lg leading-relaxed italic">
-                Theoretical Computer Scientist specializing in Quantum Networking, Cryptography, and Generative AI. 
-                Bridging deep theoretical research from IIT Delhi with space-grade infrastructure.
+            <p data-aos="fade-up" data-aos-delay="300" class="text-xl md:text-2xl text-gray-400 max-w-3xl font-light">
+                Scientist at <span class="text-white font-bold">ISRO</span> • IIT-Delhi Alumnus • Quantum Explorer 
             </p>
         </section>
 
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 p-6 pb-20">
-            <div data-aos="fade-right" class="glass p-8 rounded-[2rem]">
-                <h3 class="text-orange-500 font-mono mb-4">PRO TRAJECTORY</h3>
-                <ul class="space-y-6">
-                    <li>
-                        <h4 class="font-bold text-white">Scientist C @ ISRO</h4>
-                        <p class="text-sm text-gray-500">Dec 2023 - Present | Hyderabad</p>
-                    </li>
-                    <li>
-                        <h4 class="font-bold text-white">Programmer @ AIIMS New Delhi</h4>
-                        <p class="text-sm text-gray-500">May 2021 - Dec 2023</p>
-                    </li>
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 p-6 mb-20">
+            
+            <div data-aos="fade-right" class="md:col-span-2 glass p-10 rounded-[2.5rem] glow transition-all">
+                <h2 class="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent italic">The Mission</h2>
+                <p class="text-gray-300 text-lg leading-relaxed">
+                    Theoretical Computer Scientist at the **Department of Space**[cite: 21, 25]. Working on the edge of **Quantum Networking**, **Cryptography**, and **Gen AI**. From **AIIMS New Delhi** to **ISRO**, I build secure digital universes[cite: 19, 23, 28].
+                </p>
+            </div>
+            
+            <div data-aos="fade-left" class="glass p-10 rounded-[2.5rem] glow flex flex-col justify-center group">
+                <h3 class="font-bold text-xl text-blue-400 mb-4 tracking-widest uppercase">Tech Stack</h3>
+                <ul class="text-gray-400 font-mono text-sm space-y-2">
+                    <li>> Qiskit / IBMQ </li>
+                    <li>> PyTorch / Gen AI [cite: 15, 22]</li>
+                    <li>> Network Security </li>
+                    <li>> VMWare / ESXI [cite: 5, 6]</li>
                 </ul>
             </div>
 
-            <div data-aos="fade-left" class="glass p-8 rounded-[2rem]">
-                <h3 class="text-orange-500 font-mono mb-4">ACADEMIC FOUNDATION</h3>
-                <ul class="space-y-6">
-                    <li>
-                        <h4 class="font-bold text-white">IIT Delhi</h4>
-                        <p class="text-sm text-gray-500">Master's in Computer Science (2024)</p>
-                    </li>
-                    <li>
-                        <h4 class="font-bold text-white">IIT Hyderabad</h4>
-                        <p class="text-sm text-gray-500">M.Tech in Quantum Internet (2021)</p>
-                    </li>
-                </ul>
+            <div data-aos="fade-up" class="glass p-10 rounded-[2.5rem] glow flex flex-col">
+                <span class="text-4xl mb-4">🎓</span>
+                <h3 class="font-bold text-xl">IIT Delhi</h3>
+                <p class="text-sm text-gray-500 mt-2">Master's in Computer Science [cite: 42]</p>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="200" class="glass p-10 rounded-[2.5rem] glow flex flex-col bg-gradient-to-br from-blue-900/20 to-transparent">
+                <span class="text-4xl mb-4">🏆</span>
+                <h3 class="font-bold text-xl text-yellow-500">Talent Scholar</h3>
+                <p class="text-sm text-gray-500 mt-2">Honors & Awards [cite: 16, 17]</p>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="400" class="glass p-10 rounded-[2.5rem] glow flex flex-col">
+                <span class="text-4xl mb-4">📡</span>
+                <h3 class="font-bold text-xl text-emerald-400">Scientist C</h3>
+                <p class="text-sm text-gray-500 mt-2">Department of Space [cite: 25, 26]</p>
             </div>
         </div>
     </main>
@@ -82,12 +91,16 @@ title: Anurag Sharma | ISRO Scientist
         AOS.init({ duration: 1000, once: true });
         particlesJS("particles-js", {
             particles: {
-                number: { value: 40 },
+                number: { value: 100, density: { enable: true, value_area: 800 } },
                 color: { value: "#ffffff" },
-                opacity: { value: 0.2 },
-                size: { value: 1 },
-                line_linked: { enable: true, distance: 150, opacity: 0.1 },
-                move: { enable: true, speed: 0.5 }
+                shape: { type: "circle" },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.1, width: 1 },
+                move: { enable: true, speed: 2, direction: "none", random: false, straight: false, out_mode: "out" }
+            },
+            interactivity: {
+                events: { onhover: { enable: true, mode: "repulse" } }
             }
         });
     </script>
